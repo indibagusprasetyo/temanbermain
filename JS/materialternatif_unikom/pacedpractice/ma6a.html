@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="objeckTextarea">
+        <base href="ma6a.html">
+        <title>Objek TextArea</title>
+    </head>
+
+    <script>
+        function proses() {
+            var jabatan = document.form.jabatan.value;
+            var pendidikan = document.form.pendidikan.value;
+            var alamat = document.form.alamat.value;
+            alert("Jabatan : "+jabatan+"\nPendidikan : "+pendidikan+"\nAlamat : "+alamat);
+        }
+    </script>
+
+    <body>
+        <center>
+            <form name="form">
+                <table>
+                    <thead>
+                        <td colspan="2"><h3>Membaca objek bertipe select dan TextArea</h3></td>
+                    </thead>
+                    <tr>
+                        <td colspan="2"><hr></td>
+                    </tr>
+                    <tr>
+                        <td>Jabatan</td>
+                        <td>
+                            <select name="jabatan">
+                                <option>MANAGER</option>
+                                <option>HRD</option>
+                                <option>MARKETING</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pendidikan</td>
+                        <td>
+                            <select name="pendidikan">
+                                <option>SMA</option>
+                                <option>S1</option>
+                                <option>S2</option>
+                                <option>S3</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Alamat</Td>
+                        <td><textarea name="alamat" size="30"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><hr></td>
+                    </tr>
+                </table>
+
+                <input type="button" value="Proses" onclick="proses()">
+                <input type="reset" value="Reset">
+            </form>
+        </center>
+    </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="ObjekRead"> 
+        <base href="ma5.2b.html">
+        <title>Menghitung harga</title>
+    </head>
+    <body>
+    <script>
+        function proses()
+        {
+            var harga_hp = 0, harga_laptop = 0, harga_komputer=0;
+            if(document.form.handphone.checked) var harga_hp = 1200000;
+            if(document.form.laptop.checked) var harga_laptop = 5000000;
+            if(document.form.komputer.checked) var harga_komputer = 3000000;
+            //jumlahkan seluruh variabel harga
+            var total = harga_hp + harga_laptop + harga_komputer;
+            //tampilkan kelayar hasilnya
+            document.form.harga.value = total;
+        }
+        
+    </script>
+    <form name="form">
+        <center>
+            <h3>Membaca objek tipe checkbox</h3>
+            <hr/>
+            <table>
+                <tr>
+                   <td colspan="2">Pilih Barang</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2"><hr/></td>
+                </tr>
+
+                <tr>
+                    <td><input type="checkbox" name="handphone">handphone</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="laptop">Laptop</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="komputer">Komputer</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2"><hr/></td>
+                </tr>
+                
+                <tr>
+                    <td>Harga</td>
+                    <td><input type="text" name="harga" size="15"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2"><hr/></td>
+                </tr>
+            </table>
+            <hr/>
+            <input type="button" value="Proses" onclick="proses()">
+            <input type="reset" value="Reset">
+        </center>
+    </form>
+    </body>
+</html>

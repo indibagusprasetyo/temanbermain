@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--
+        Nama    : Indi Bagus Prasetyo
+        Kelas   : IF-9K/S1/II
+        Matkul  : Pemograman Web II
+        Dosen   : Geraldi Catur Pamuji, S.Kom, M.Kom.
+
+        Ket     : Tugas_502
+    -->
+<!--Style/css-->
+<style type="text/css">
+    .main {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        align-items: center;
+    }
+</style>
+<!--html ; head-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1.0">
+        <base href="ma5practice2.html">
+        <title>Gaji Karyawan</title>
+    </head>
+<!--html ; body-->
+    <body>
+        <div class="main">
+        <center>
+        <h1>Program Gaji Karyawan</h1><hr />
+        <form method="post">
+            <table>
+                <!--Input-->
+                <tr>
+                    <td>Nama Pegawai</td>
+                    <td>=</td>
+                    <td><input type="text" id="nama" name="nama" maxlength="40" size="40"></td>
+                </tr>
+                <tr>
+                    <td>Jam Kerja PerHari</td>
+                    <td>=</td>
+                    <td><input type="text" id="jamphari" name="jamphari" maxlength="2" size="2"></td>
+                </tr>
+                <tr>
+                    <td>Upah PerJam</td>
+                    <td>=</td>
+                    <td><input type="text" id="upahjam" name="upahjam" maxlength="9" size="9"></td>
+                </tr>
+                <tr>
+                    <td>Jumlah Anak</td>
+                    <td>=</td>
+                    <td><input type="text" id="jumlahanak" name="jumlahanak" maxlength="2" size="2"></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><hr/></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="Proses" onclick="output()">
+                        <input type="reset" value="Reset"></td></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><hr/></td>
+                </tr>
+                <!--Output-->
+                <tr>
+                    <td>Gaji PerBulan</td>
+                    <td>=</td>
+                    <td><input type="text" id="gajibulan" name="gajibulan" maxlength="12"></td>
+                </tr>
+                <tr>
+                    <td>Tunjangan Anak</td>
+                    <td>=</td>
+                    <td><input type="text" id="tunjanganak" name="tunjanganak" maxlength="12"></td>
+                </tr>
+                <tr>
+                    <td>Total Gaji PerBulan</td>
+                    <td>=</td>
+                    <td><input type="text" id="totalgaji" name="totalgaji" maxlength="12"></td>
+                </tr>
+                <tr>
+                    <td>PPH 10%</td>
+                    <td>=</td>
+                    <td><input type="text" id="pph" name="pph" maxlength="12"></td>
+                </tr>
+                <tr>
+                    <td>Gaji Bersih Diterima</td>
+                    <td>=</td>
+                    <td><input type="text" id="gajibersih" name="gajibersih" maxlength="12"></td>
+                </tr>
+                <tr align="center">
+                    <td colspan="3"><hr/></td>
+                </tr>
+            </table>
+            <hr />
+        </form>
+        </center>
+        </div>
+    </body>
+<!--Scripts/JavaScripts-->
+<script>
+    //showItem
+    function numberWithDot(x) {
+          return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+     }
+
+    //output process
+    function output() {
+        //gaji perbulan
+        var jamphari = document.getElementById("jamphari").value;
+        var upahjam = document.getElementById("upahjam").value;
+        var totalpbulan = 4 * (jamphari * 5);
+        var gajibulan = totalpbulan * upahjam;
+        document.getElementById("gajibulan").value = numberWithDot(gajibulan);
+        
+        //tunjangan anak
+        var tunjanganak ;
+        var jumlahanak = document.getElementById("jumlahanak").value;
+        var utkAnak = (gajibulan * 0.1) * jumlahanak;
+        document.getElementById("tunjanganak").value = numberWithDot(utkAnak);
+        
+        //total gaji perbulan
+        var totalgaji = gajibulan + utkAnak;
+        document.getElementById("totalgaji").value = numberWithDot(totalgaji);
+        
+        //pph 10%
+        var pph = totalgaji * 0.1;
+        document.getElementById("pph").value = numberWithDot(pph);
+        
+        //gaji bersih
+        var gajibersih = totalgaji - pph;
+        document.getElementById("gajibersih").value = numberWithDot(gajibersih);
+
+    }
+</script>
+</html>

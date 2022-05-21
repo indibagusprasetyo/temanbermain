@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+      <!--
+        Nama    : Indi Bagus Prasetyo
+        NIM     : 10121902
+        Kelas   : IF9K/S1/II
+        Matkul  : Pemograman Web 2
+        Dosen   : Geraldi Catur Pamuji, S.Kom, M.Kom.
+    -->
+    <head>
+        <meta charset="UTF-8">
+        <base href="ma3practice1.html">
+        <title>Latihan 3A</title>
+    </head>
+
+    <script type="text/javascript">
+        var nama = "Asep";
+        var tb = 170;
+        var jk = "Perempuan"
+
+        document.write("Nama Anda : ", nama)
+        document.write("<br/>")
+        document.write("Jenis Kelamin : ", jk)
+        document.write("<br/>")
+        document.write("Tinggi Badan : ", tb)
+        document.write("<br/>")
+
+        if(jk == "Laki-laki") {
+            var laki = (tb - 100) * 0.90
+            document.write("Berat Badan Ideal Anda : ",laki,"Kg")
+        } else if (jk == "Perempuan") {
+            var cw = (tb - 100) * 0.85
+            document.write("Berat Badan Ideal Anda : ",cw,"Kg")
+        } else {
+            document.write("Jenis Kelamin Tidak Diketahui")
+        }
+    </script>
+</html>

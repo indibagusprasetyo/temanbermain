@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <base href="ma5c.html">
+        <title>Objek Teks</title>
+    </head>
+    <body>
+    <script lang="javascript">
+     function radio_box(form)
+     {
+         var ket = "";
+         if (form.wanita.checked==true)
+         {
+             ket = "Wanita"
+         }
+         else
+         {
+             ket = "Pria"
+         }
+         alert("Anda adalah seorang "+ket)
+     }
+    </script>
+
+    <form>
+        <h1>Masukan data dengan objek checkBox</h1>
+        <p><input type="checkbox" value="wanita" name="wanita">Wanita</p>
+        <hr/>
+        <p>
+            <input type="checkbox" value="CONFIRM" onclick="radio_box(this.form)">
+            <input type="reset" value="RESET">
+        </p>
+    </form>
+    </body>
+</html>

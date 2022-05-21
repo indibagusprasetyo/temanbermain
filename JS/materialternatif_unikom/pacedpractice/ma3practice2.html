@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+      <!--
+        Nama    : Indi Bagus Prasetyo
+        NIM     : 10121902
+        Kelas   : IF9K/S1/II
+        Matkul  : Pemograman Web 2
+        Dosen   : Geraldi Catur Pamuji, S.Kom, M.Kom.
+    -->
+    <head>
+        <meta charset="UTF-8">
+        <base href="ma3practice2.html">
+        <title>Latihan 3B</title>
+    </head>
+
+    <script type="text/javascript">
+        var nama = "Asep";
+        var tb = 172;
+        var bb = 71;
+
+        document.write("Nama Anda : ", nama);
+        document.write("<br/>");
+        document.write("Tinggi Badan : ", tb,"cm");
+        document.write("<br/>");
+        document.write("Berat Badan : ", bb,"Kg");
+        document.write("<br/>");
+
+
+        var meter = tb / 100;
+        var bmi = bb / (meter * 2);
+
+        if(bmi <= 18.5) {
+            document.write("Body Mass Ideal Anda : ",bmi);
+            document.write("<br/>");
+            document.write("Keterangan : Kekurangan Berat Badan");
+        } else if (bmi >= 18.5 && bmi <= 24.9) {
+            document.write("Body Mass Ideal Anda : ",bmi);
+            document.write("<br/>");
+            document.write("Keterangan : Normal");
+        } else if (bmi >= 25.0 && bmi <= 29.9) {
+            document.write("Body Mass Ideal Anda : ",bmi);
+            document.write("<br/>");
+            document.write("Keterangan : Kelebihan Berat Badan");
+        } else if (bmi >= 30.0) {
+            document.write("Body Mass Ideal Anda : ",bmi);
+            document.write("<br/>");
+            document.write("Keterangan : Kegemukan / Obesitas");
+        } else {
+            document.write("BMI tidak diketahui")
+        }
+    </script>
+</html>

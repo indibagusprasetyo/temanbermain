@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--
+        Nama    : Indi Bagus Prasetyo
+        NIM     : 10121902
+        Kelas   : IF9K/S1/II
+        Matkul  : Pemograman Web 2
+        Dosen   : Geraldi Catur Pamuji, S.Kom, M.Kom.
+    -->
+    <style type="text/css">
+
+    </style>
+
+    <head>
+        <meta charset="UTF-8">
+        <base href="ma6practice1.html">
+        <title>Latihan 6A</title>
+    </head>
+    <body>
+        <center>
+        <div class="main">
+            <h2>PROGRAM GAJI PEGAWAI</h2>
+            <hr/>
+        <form>
+            <table>
+                <tr>
+                    <td>Nama Pegawai</td>
+                    <td><input name="nama" id="nama" max="15" maxlength="15"></td>
+                </tr>
+                <tr>
+                    <td>Jabatan</td>
+                    <td>
+                        <select name="jabatan" id="jabatan">
+                            <option>MANAGER</option>
+                            <option>HRD</option>
+                            <option>Marketing</option>
+                        </select>
+                    </td>
+                <tr>
+                    <td>Pendidikan</td>
+                    <td>
+                        <select name="pendidikan" id="pendidikan">
+                            <option>SMA/K/MA</option>
+                            <option>S1</option>
+                            <option>S2</option>
+                            <option>S3</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Alamat</td>
+                    <td><Textarea max="30" maxlength="50"></Textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><hr/></td>
+                </tr>
+                <tr>
+                    <td>Gaji Pokok</td>
+                    <td><input name="gapok" id="gapok" max="12" maxlength="12"></td>
+                </tr>
+            </table>
+            <hr/>
+            <input type="button" value="Proses" onclick="output()">
+            <input type="reset" value="Reset"></td></td>
+        </form>
+        </div>
+        </center>
+    </body>
+
+    <script type="text/javascript">
+        //output
+        function output() {
+          //gaji pokok
+          if (document.getElementById("jabatan").value == 'MANAGER') {
+               let gapok1 = 15000000;
+               document.getElementById("gapok").value = (gapok1);
+          } if (document.getElementById("jabatan").value == 'HRD') {
+               let gapok1 = 8000000;
+               document.getElementById("gapok").value = (gapok1);
+          } if (document.getElementById("jabatan").value == 'MARKETING') {
+               let gapok1 = 5000000;
+               document.getElementById("gapok").value = (gapok1);
+          }
+        }
+    </script>

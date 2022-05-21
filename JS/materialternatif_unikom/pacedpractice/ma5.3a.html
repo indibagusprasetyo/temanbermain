@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="objek">
+        <base href="ma5.3a.html">
+        <title>Objek Radio</title>
+    </head>
+
+    <body>
+        <script lang="javascript">
+            function proses() {
+                if(document.form.jk[0].checked) var jk = "Pria";
+                if(document.form.jk[1].checked) var jk = "Wanita";
+                if(document.form.jk[2].checked) var jk = "Tidak Diketahui";
+
+                alert("Jenis Kelamin Anda : " + jk);
+            }
+        </script>
+        <form name="form">
+            <center>
+                <table>
+                    <thead>
+                        <td><h3>Membaca Objek bertipe Radio</h3></td>
+                    </thead>
+                    <tr>
+                        <td><hr/></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <center>
+                            <table>
+                                <tr>
+                                    <td>Jenis Kelamin :</td>
+                                </tr>
+                                <tr>
+                                    <td><hr/></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" name="jk">Pria</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" name="jk">Wanita</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" name="jk">Tidak Diketahui</td>
+                                </tr>
+                            </table>
+                            </center>
+                        </td>
+                    <tr>
+                        <td><hr></td>
+                    </tr>
+                </table>
+                <input type="button" value="Proses" onclick="proses()">
+                <input type="reset" value="Reset">
+            </center>
+        </form>
+    </body>
+</html>

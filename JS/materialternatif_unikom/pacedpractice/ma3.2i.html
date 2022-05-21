@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="latihan">
+        <meta name="keywords" content="javascript">
+        <meta name="author" content="xpro">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="refresh" content="120">
+    
+        <base href="ma3.2i.html">
+        <title>Array</title>
+    </head>
+    <body>
+        <h3>Array dengan splice()</h3>
+        <br/>
+    </body>
+    <script>
+        var array1 = [1,2,3,4,5,"a","b","c","d","e"];
+        document.write(array1.toString(),"<br>");
+        //splice dari index ke 2
+        var array2 = array1.splice(2)
+        document.write(array1.toString(),"<br>");
+        //hasil : 1,2
+        document.write(array2.toString(),"<br>");
+        //hasil : 3,4,a,b,c,d
+
+        
+        var arr1 = [1,2,3,4,"a","b","c","d"];
+        document.write(arr1.toString(),"<br>"); // hasil: 1,2,3,4,a,b,c,d
+        //hapus 3 elemen mulai dari index ke 3
+        var arr2 = arr1.splice(3,3);
+        document.write(arr1.toString(),"<br>"); // hasil: 1,2,3,c,d
+        document.write(arr2.toString(),"<br>"); // hasil: 4,a,b
+    </script>
+</html>
