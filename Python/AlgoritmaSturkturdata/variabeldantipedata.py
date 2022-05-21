@@ -1,0 +1,1 @@
+print("Aku Pensiun dari tempat kerja")
